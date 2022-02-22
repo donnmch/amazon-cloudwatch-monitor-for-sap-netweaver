@@ -90,7 +90,7 @@ public class Utils {
                 .put("Unit", "None")
                 .put("Name", metric_name));
 
-            myjson.put("by SID", dimension_name);
+            myjson.put("bySID", dimension_name);
             
             myjson.put(metric_name, value);
         }
@@ -107,7 +107,7 @@ public class Utils {
                 JSONObject resultjson = alljson.getJSONObject(key);
 
                 JSONArray dimensions = new JSONArray();
-                dimensions.put(new JSONArray().put("by SID"));
+                dimensions.put(new JSONArray().put("bySID"));
 
                 JSONObject myaws = resultjson.getJSONObject("_aws");
 
