@@ -1,3 +1,3 @@
-v1.0.0 - April 22nd
+v1.1 - Feb 22nd
 
-Initial release covering /SDF/SMON & st03
+Initial fork targeting Athena/Glue/Quicksights requirements

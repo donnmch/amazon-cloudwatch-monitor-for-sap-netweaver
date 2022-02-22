@@ -101,7 +101,7 @@ public class DataProviderST03 {
                     long AVG_RESPONSE_TIME = Math.round(TOTAL_RESPONSE_TIME / STEPS);
 
                     //Average db time per STEP
-                    //long AVG_DB_TIME = Math.round(TOTAL_DB_TIME/ STEPS);
+                    long AVG_DB_TIME = Math.round(TOTAL_DB_TIME/ STEPS);
 
                     //CPU TIME % - ideally 40%
                     long TOTAL_CPU_TIME_PC = Math.round(100 * TOTAL_CPU_TIME / TOTAL_RESPONSE_TIME);
@@ -110,7 +110,7 @@ public class DataProviderST03 {
                     long TOTAL_DB_TIME_PC = Math.round(100 * TOTAL_DB_TIME / TOTAL_RESPONSE_TIME);
 
                     //REST (Wait, load, ...) 20%
-                    //long TOTAL_REST_PC = 100 - TOTAL_DB_TIME_PC - TOTAL_CPU_TIME_PC;
+                    long TOTAL_REST_PC = 100 - TOTAL_DB_TIME_PC - TOTAL_CPU_TIME_PC;
 
                     //DB Time per Direct Read <10ms
                     double AVG_DB_TIME_DIR = 0.0;
@@ -133,11 +133,11 @@ public class DataProviderST03 {
                     utils.collectResultEmbedded(config.destination_name, "ST03_" + TASKTYPE_LABEL + "_AVG_SNAP",(double) AVG_RESPONSE_TIME);
                     utils.collectResultEmbedded(config.destination_name, "ST03_" + TASKTYPE_LABEL + "_CPU_TIME_PERC_SNAP",(double) TOTAL_CPU_TIME_PC);
                     utils.collectResultEmbedded(config.destination_name, "ST03_" + TASKTYPE_LABEL + "_DB_TIME_PERC_SNAP",(double) TOTAL_DB_TIME_PC);
-                    //utils.collectResultEmbedded(config.destination_name, "ST03_" + TASKTYPE_LABEL + "_R_TIME_PERC_SNAP",(double) TOTAL_REST_PC);
+                    utils.collectResultEmbedded(config.destination_name, "ST03_" + TASKTYPE_LABEL + "_R_TIME_PERC_SNAP",(double) TOTAL_REST_PC);
                     utils.collectResultEmbedded(config.destination_name, "ST03_" + TASKTYPE_LABEL + "_AVG_DB_DIR_SNAP",(double) AVG_DB_TIME_DIR);
                     utils.collectResultEmbedded(config.destination_name, "ST03_" + TASKTYPE_LABEL + "_AVG_DB_SEQ_AVG_SNAP",(double) AVG_DB_TIME_SEQ);
                     utils.collectResultEmbedded(config.destination_name, "ST03_" + TASKTYPE_LABEL + "_AVG_DB_CHG_AVG_SNAP",(double) AVG_DB_TIME_CHG);
-                    //utils.collectResultEmbedded(config.destination_name, "ST03_" + TASKTYPE_LABEL + "_AVGDB_SNAP", (double) AVG_DB_TIME);
+                    utils.collectResultEmbedded(config.destination_name, "ST03_" + TASKTYPE_LABEL + "_AVGDB_SNAP", (double) AVG_DB_TIME);
                 }
             }
             
