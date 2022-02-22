@@ -57,6 +57,10 @@ The resulting dashboards can look as follows
 
 ## Changelog
 
+1.1
+
+- Removed spaces from dimensions to use Cloudwatch streams
+ 
 1.063
 
 - Bug Fix we02 setting
