@@ -30,8 +30,8 @@
             "type": "metric",
             "properties": {
                 "metrics": [
-                    [ { "expression": "SEARCH('{\"sap-monitor\",\"by SID\"} HDB AND MetricName=USR_TOTAL', 'Average', 60)", "label": "#", "id": "e1", "region": "eu-central-1" } ],
-                    [ { "expression": "SEARCH('{\"sap-monitor\",\"by SID\"} HDB AND MetricName=SYS_TOTAL', 'Average', 60)", "label": "#", "id": "e2", "region": "eu-central-1" } ]
+                    [ { "expression": "SEARCH('{\"sap-monitor\",\"bySID\"} HDB AND MetricName=USR_TOTAL', 'Average', 60)", "label": "#", "id": "e1", "region": "eu-central-1" } ],
+                    [ { "expression": "SEARCH('{\"sap-monitor\",\"bySID\"} HDB AND MetricName=SYS_TOTAL', 'Average', 60)", "label": "#", "id": "e2", "region": "eu-central-1" } ]
                 ],
                 "view": "timeSeries",
                 "stacked": false,
@@ -61,7 +61,7 @@
             "type": "metric",
             "properties": {
                 "metrics": [
-                    [ { "expression": "SEARCH('{\"sap-monitor\",\"by SID\"} HDB AND MetricName=ACT_DIA', 'Average', 60)", "label": "#", "id": "e1", "region": "eu-central-1" } ]
+                    [ { "expression": "SEARCH('{\"sap-monitor\",\"bySID\"} HDB AND MetricName=ACT_DIA', 'Average', 60)", "label": "#", "id": "e1", "region": "eu-central-1" } ]
                 ],
                 "view": "timeSeries",
                 "stacked": false,
@@ -123,7 +123,7 @@
             "type": "metric",
             "properties": {
                 "metrics": [
-                    [ { "expression": "SEARCH('{\"sap-monitor\",\"by SID\"} HDB AND MetricName=USERS', 'Average', 60)", "label": "#", "id": "e1", "region": "eu-central-1" } ]
+                    [ { "expression": "SEARCH('{\"sap-monitor\",\"bySID\"} HDB AND MetricName=USERS', 'Average', 60)", "label": "#", "id": "e1", "region": "eu-central-1" } ]
                 ],
                 "view": "timeSeries",
                 "stacked": true,
@@ -153,7 +153,7 @@
             "type": "metric",
             "properties": {
                 "metrics": [
-                    [ { "expression": "SEARCH('{\"sap-monitor\",\"by SID\"} HDB AND MetricName=FREE_MEM_PERC', 'Average', 60)", "label": "#", "id": "e1", "region": "eu-central-1" } ]
+                    [ { "expression": "SEARCH('{\"sap-monitor\",\"bySID\"} HDB AND MetricName=FREE_MEM_PERC', 'Average', 60)", "label": "#", "id": "e1", "region": "eu-central-1" } ]
                 ],
                 "view": "timeSeries",
                 "stacked": false,
@@ -180,7 +180,7 @@
             "type": "metric",
             "properties": {
                 "metrics": [
-                    [ "sap-monitor", "ST03_DIA_AVG_SNAP", "by SID", "HDB", { "label": "Avg. Dialog Response Time per Step" } ],
+                    [ "sap-monitor", "ST03_DIA_AVG_SNAP", "bySID", "HDB", { "label": "Avg. Dialog Response Time per Step" } ],
                     [ ".", "ST03_RFC_AVG_SNAP", ".", ".", { "label": "Avg. RFC Response Time per Step" } ]
                 ],
                 "view": "timeSeries",
@@ -207,7 +207,7 @@
             "type": "metric",
             "properties": {
                 "metrics": [
-                    [ "sap-monitor", "ST03_RFC_DB_TIME_PERC_SNAP", "by SID", "HDB", { "label": "DB Time %" } ],
+                    [ "sap-monitor", "ST03_RFC_DB_TIME_PERC_SNAP", "bySID", "HDB", { "label": "DB Time %" } ],
                     [ ".", "ST03_RFC_CPU_TIME_PERC_SNAP", ".", ".", { "label": "CPU Time %" } ]
                 ],
                 "view": "pie",
@@ -245,7 +245,7 @@
             "type": "metric",
             "properties": {
                 "metrics": [
-                    [ "sap-monitor", "ST03_RFC_AVG_DB_SEQ_AVG_SNAP", "by SID", "HDB", { "label": "Sequential reads (ms)" } ],
+                    [ "sap-monitor", "ST03_RFC_AVG_DB_SEQ_AVG_SNAP", "bySID", "HDB", { "label": "Sequential reads (ms)" } ],
                     [ ".", "ST03_RFC_AVG_DB_CHG_AVG_SNAP", ".", ".", { "label": "Changes (ms)" } ],
                     [ ".", "ST03_RFC_AVG_DB_DIR_SNAP", ".", ".", { "label": "Direct reads (ms)" } ]
                 ],
@@ -269,7 +269,7 @@
                     [ ".", "Invocations", ".", ".", ".", ".", { "id": "invocations", "stat": "Sum", "visible": false } ],
                     [ { "expression": "100 - 100 * errors / MAX([errors, invocations])", "label": "Success rate (%)", "id": "availability", "yAxis": "right", "region": "eu-central-1" } ],
                     [ "AWS/Lambda", "Duration", "FunctionName", "sap-monitor-HDB", { "id": "m1", "color": "#e377c2", "label": "Monitor Response Time" } ],
-                    [ "sap-monitor", "PING", "by SID", "HDB", { "id": "m2", "color": "#9467bd", "label": "RFC Response Time" } ]
+                    [ "sap-monitor", "PING", "bySID", "HDB", { "id": "m2", "color": "#9467bd", "label": "RFC Response Time" } ]
                 ],
                 "region": "eu-central-1",
                 "title": "Monitor Status and Performance",
@@ -301,7 +301,7 @@
             "type": "metric",
             "properties": {
                 "metrics": [
-                    [ "sap-monitor", "TOTAL_APP_SERVERS", "by SID", "HDB" ]
+                    [ "sap-monitor", "TOTAL_APP_SERVERS", "bySID", "HDB" ]
                 ],
                 "view": "timeSeries",
                 "stacked": false,
@@ -337,7 +337,7 @@
             "type": "metric",
             "properties": {
                 "metrics": [
-                    [ "sap-monitor", "ST22_DUMPS", "by SID", "HDB", { "label": "Today" } ]
+                    [ "sap-monitor", "ST22_DUMPS", "bySID", "HDB", { "label": "Today" } ]
                 ],
                 "view": "singleValue",
                 "region": "eu-central-1",
@@ -355,7 +355,7 @@
             "type": "metric",
             "properties": {
                 "metrics": [
-                    [ "sap-monitor", "SM37_CANCELLED_JOBS", "by SID", "HDB", { "label": "Cancelled Today" } ]
+                    [ "sap-monitor", "SM37_CANCELLED_JOBS", "bySID", "HDB", { "label": "Cancelled Today" } ]
                 ],
                 "view": "singleValue",
                 "region": "eu-central-1",
@@ -372,7 +372,7 @@
             "type": "metric",
             "properties": {
                 "metrics": [
-                    [ "sap-monitor", "WE02_INBOUND", "by SID", "HDB", { "label": "Failed Inbound" } ],
+                    [ "sap-monitor", "WE02_INBOUND", "bySID", "HDB", { "label": "Failed Inbound" } ],
                     [ ".", "WE02_OUTBOUND", ".", ".", { "label": "Failed Outbound" } ]
                 ],
                 "view": "singleValue",
