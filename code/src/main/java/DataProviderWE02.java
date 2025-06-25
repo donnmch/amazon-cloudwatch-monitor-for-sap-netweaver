@@ -47,7 +47,8 @@ public class DataProviderWE02 {
             
             //IMPORT
             HashMap<String, Object> importParameters = new HashMap<String, Object>();
-            String myjson = "{ \"SELOPT_PARA\":[ { \"CALL_ID\":0, \"SELECTION_PARAMETER\":[ { \"PARAM\":\"DIRECTION\", \"T_RANGES\":[{ \"SIGN\":\"\", \"OPTION\":\"EQ\", \"LOW\":\"INBOUND\", \"HIGH\":\"\" }] }, { \"PARAM\":\"STATUS\", \"T_RANGES\":[{ \"SIGN\":\"\", \"OPTION\":\"EQ\", \"LOW\":\"RED\", \"HIGH\":\"\" }] }, { \"PARAM\":\"CLIENT\", \"T_RANGES\":[{ \"SIGN\":\"\", \"OPTION\":\"EQ\", \"LOW\":\"TOTAL\", \"HIGH\":\"\" }] }, { \"PARAM\":\"IGNORE_BEFORE_DATE\", \"T_RANGES\":[{ \"SIGN\":\"\", \"OPTION\":\"EQ\", \"LOW\":\""+today+"\", \"HIGH\":\"\" }] } ] } ] }";
+            String myjson = "{ \"SELOPT_PARA\":[ { \"CALL_ID\":0, \"SELECTION_PARAMETER\":[ { \"PARAM\":\"DIRECTION\", \"T_RANGES\":[{ \"SIGN\":\"\", \"OPTION\":\"EQ\", \"LOW\":\"INBOUND\", \"HIGH\":\"\" }] }, { \"PARAM\":\"STATUS\", \"T_RANGES\":[{ \"SIGN\":\"\", \"OPTION\":\"EQ\", \"LOW\":\"53\", \"HIGH\":\"\" }] }, { \"PARAM\":\"CLIENT\", \"T_RANGES\":[{ \"SIGN\":\"\", \"OPTION\":\"EQ\", \"LOW\":\"TOTAL\", \"HIGH\":\"\" }] }, { \"PARAM\":\"IGNORE_BEFORE_DATE\", \"T_RANGES\":[{ \"SIGN\":\"\", \"OPTION\":\"EQ\", \"LOW\":\""+today+"\", \"HIGH\":\"\" }] } ] } ] }";
+            //String myjson = "{ \"SELOPT_PARA\":[ { \"CALL_ID\":0, \"SELECTION_PARAMETER\":[ { \"PARAM\":\"DIRECTION\", \"T_RANGES\":[{ \"SIGN\":\"\", \"OPTION\":\"EQ\", \"LOW\":\"INBOUND\", \"HIGH\":\"\" }] }, { \"PARAM\":\"STATUS\", \"T_RANGES\":[{ \"SIGN\":\"\", \"OPTION\":\"EQ\", \"LOW\":\"RED\", \"HIGH\":\"\" }] }, { \"PARAM\":\"CLIENT\", \"T_RANGES\":[{ \"SIGN\":\"\", \"OPTION\":\"EQ\", \"LOW\":\"TOTAL\", \"HIGH\":\"\" }] }, { \"PARAM\":\"IGNORE_BEFORE_DATE\", \"T_RANGES\":[{ \"SIGN\":\"\", \"OPTION\":\"EQ\", \"LOW\":\""+today+"\", \"HIGH\":\"\" }] } ] } ] }";
             importParameters.put("json", myjson);
     
             //EXECUTE
